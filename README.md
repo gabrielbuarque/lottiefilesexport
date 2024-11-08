@@ -1,6 +1,8 @@
 # Lottie File Downloader and Extractor
 
-Este é um script em Node.js que acessa uma página do LottieFiles, encontra o primeiro elemento `<dotlottie-player>`, extrai o link do arquivo `.lottie` e pergunta se o usuário deseja fazer o download. Caso confirmado, o script baixa o arquivo `.lottie`, o trata como um arquivo ZIP, extrai o arquivo JSON contido na pasta `animations` e o salva no diretório atual.
+Esse script em Node.js é para quem quer baixar animações gratuitas do LottieFiles sem se preocupar com o limite de 10 downloads! Ele acessa a página do LottieFiles, pega o link do arquivo `.lottie`, e baixa pra você. De quebra, ainda extrai o JSON de animação pra usar onde quiser.
+
+> **Nota:** Isso só funciona com animações gratuitas do LottieFiles. Essa é uma ótima alternativa para contornar o limite de 10 downloads oferecido pela plataforma e automatizar o processo sem limites para conteúdo gratuito.
 
 ## Funcionalidades
 - Acessa uma página do LottieFiles e encontra o link do arquivo `.lottie`.
@@ -35,13 +37,13 @@ node baixarEExtrairLottie.js <URL-da-página-do-LottieFiles>
 node baixarEExtrairLottie.js https://lottiefiles.com/free-animation/sad-face-with-sweat-DtCktQoLl3
 ```
 
-O script carregará a página, encontrará o primeiro `<dotlottie-player>`, e exibirá o link do arquivo `.lottie` encontrado.
+O script vai carregar a página, encontrar o primeiro `<dotlottie-player>`, e exibir o link do arquivo `.lottie` encontrado.
 
-O script perguntará se deseja prosseguir com o download. Digite `s` para confirmar ou `n` para cancelar.
+Depois, ele vai perguntar se você quer prosseguir com o download. Digite `s` para confirmar ou `n` para cancelar.
 
 Se confirmado, o arquivo `.lottie` será baixado e salvo no diretório atual.
 
-O script converterá o arquivo `.lottie` para ZIP, extrairá o arquivo JSON da pasta `animations`, e salvará o JSON no diretório atual.
+O script vai converter o arquivo `.lottie` para ZIP, extrair o arquivo JSON da pasta `animations`, e salvar o JSON no diretório atual.
 
 ## Exemplo de Saída
 ```bash
@@ -58,4 +60,5 @@ Arquivo JSON 'animation.json' extraído e salvo com sucesso.
 
 ## Observações
 - Certifique-se de ter permissão para baixar e usar as animações, respeitando os termos de uso e licenciamento do LottieFiles.
+- Este script é uma solução alternativa para baixar arquivos gratuitos do LottieFiles sem limite de downloads, apenas para conteúdo gratuito, ajudando a contornar o limite padrão de 10 downloads imposto pela plataforma.
 - O script foi testado com páginas do LottieFiles que contêm o elemento `<dotlottie-player>`.
